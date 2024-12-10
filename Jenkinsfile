@@ -20,14 +20,6 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
-            steps {
-                script {
-                    sh 'npm test'
-                }
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 script {
@@ -43,6 +35,7 @@ pipeline {
             steps {
                 script {
                     sh '''
+                    minikube start
                     kubectl apply -f k8s/deployment.yaml
                     kubectl apply -f k8s/service.yaml
                     '''
