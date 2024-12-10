@@ -35,9 +35,8 @@ pipeline {
             steps {
                 script {
                     powershell '''
-                    minikube start
-                    kubectl apply -f k8s/deployment.yaml
-                    kubectl apply -f k8s/service.yaml
+                    kubectl apply -f k8s/deployment.yml
+                    kubectl apply -f k8s/service.yml
                     '''
                 }
             }
