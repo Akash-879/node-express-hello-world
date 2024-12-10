@@ -11,5 +11,11 @@ Run it on Local machine
   npm start
 
   Go to localhost:3000
-
 ```  
+# Create Docker file
+```
+   # docker build -t <tag-name> .
+   # docker run -d -p 3001:3001 <image-name>
+```
+
+   
