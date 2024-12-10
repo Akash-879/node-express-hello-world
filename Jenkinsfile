@@ -49,7 +49,7 @@ pipeline {
                 }
             }
         }
-
+    }
     post {
         success {
             mail to: 'rathodakash4615@gmail.com', subject: 'Pipeline Success', body: 'The deployment was successful.'
@@ -58,5 +58,4 @@ pipeline {
             mail to: 'rathodakash4615@gmail.com', subject: 'Pipeline Failure', body: 'The pipeline failed.'
         }
     }
-}
 }
