@@ -15,7 +15,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 script {
-                    sh 'npm install'
+                    powershell 'npm install'
                 }
             }
         }
@@ -34,7 +34,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 script {
-                    sh '''
+                    powershell '''
                     minikube start
                     kubectl apply -f k8s/deployment.yaml
                     kubectl apply -f k8s/service.yaml
